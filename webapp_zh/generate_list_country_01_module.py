@@ -1,4 +1,4 @@
-# -*- coding: utf-8 -*- 
+﻿# -*- coding: utf-8 -*- 
 # 函数化，以备import 调用模块（module）
 
 def get_classtime_name(fn='data\classtime.tsv'):
@@ -7,9 +7,9 @@ def get_classtime_name(fn='data\classtime.tsv'):
        reader = csv.DictReader(csvfile, fieldnames=['c_code', 'c_name'], delimiter='\t')
        fieldnames = reader.fieldnames
 
-       list_dict_classtime = []
+       tuple_dict_classtime = []
        for row in reader:
-          list_dict_classtime.append(dict(row))
+          tuple_dict_classtime.append(dict(row))
 
        data = {d['c_code']:d['c_name'] for d in list_dict_classtime}
    return(data)
