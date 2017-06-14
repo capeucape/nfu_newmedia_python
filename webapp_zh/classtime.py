@@ -13,7 +13,7 @@ class classtime_list_name (object):
            list_dict_classtime = []
            for row in reader:
                   list_dict_classtime.append(dict(row))
-
+                  list_dict_classtime.pop(dict(row))
            self.data = {d['c_code']:d['c_name'] for d in list_dict_classtime}
 
     def classtime_name(self, c_code=''):
