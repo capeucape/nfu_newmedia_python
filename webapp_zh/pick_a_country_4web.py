@@ -1,10 +1,11 @@
-# -*- coding: utf-8 -*- 
+﻿# -*- coding: utf-8 -*- 
 # 使用模块moduld classtime
 
 import classtime
 c = classtime.classtime_list_name()
 c_list = [c.data[k] for k in sorted(c.data.keys())]
-c_dict_reverse = {v:k for k, v in c.data.items()}
+c_dict_reverse = {v:k for k, v in c.data.items()}get(k,0)
+
 
 
 from flask import Flask, render_template, request, escape
